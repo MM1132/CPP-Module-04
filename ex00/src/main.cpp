@@ -5,6 +5,9 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 
+#include "wrong/WrongAnimal.hpp"
+#include "wrong/WrongCat.hpp"
+
 int main()
 {
 	ColorPrint::green("<<< PROGRAM IS STARTING >>>\n");
@@ -24,6 +27,17 @@ int main()
 	delete meta;
 	delete j;
 	delete i;
+
+	ColorPrint::yellow("<<< SECOND PART OF THE TASK >>>\n");
+
+	const WrongAnimal *wrongAnimal = new WrongAnimal();
+	const WrongCat *wrongCat = new WrongCat();
+
+	wrongAnimal->makeSound();
+	wrongCat->makeSound();
+
+	delete wrongAnimal;
+	delete wrongCat;
 
 	return 0;
 }

@@ -10,7 +10,9 @@ SRC_FILES := \
 	$(SRC_DIR)/main.cpp \
 	$(SRC_DIR)/Animal.cpp \
 	$(SRC_DIR)/Dog.cpp \
-	$(SRC_DIR)/Cat.cpp
+	$(SRC_DIR)/Cat.cpp \
+	$(SRC_DIR)/wrong/WrongAnimal.cpp \
+	$(SRC_DIR)/wrong/WrongCat.cpp
 
 OBJ_FILES := $(SRC_FILES:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 

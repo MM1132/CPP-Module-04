@@ -11,47 +11,47 @@
 #include "exerciseOne/Brain.hpp"
 #include <unistd.h>
 
-// namespace
-// {
-// 	void printLoadingBar()
-// 	{
-// 		ColorPrint::red("BE PATIENT!!! THE TESTS ARE LOADING...\n");
-// 		for (int i = 0; i < 100; i++)
-// 		{
-// 			// Sleep for 0.1 of a second
-// 			usleep(1000 * 70);
+namespace
+{
+	void printLoadingBar()
+	{
+		ColorPrint::red("BE PATIENT!!! THE TESTS ARE LOADING...\n");
+		for (int i = 0; i < 100; i++)
+		{
+			// Sleep for 0.1 of a second
+			usleep(1000 * 70);
 
-// 			// Print the current state of the loading bar
-// 			std::cout << i + 1 << "% >> ";
-// 			for (int j = 0; j < 100; j++)
-// 			{
-// 				switch (j)
-// 				{
-// 					case 0:
-// 						std::cout << "[";
-// 						break;
-// 					case 99:
-// 						std::cout << "]";
-// 						break;
-// 					default:
-// 						if (i >= j)
-// 							std::cout << "|";
-// 						else
-// 							std::cout << ".";
-// 						break;
-// 				}
-// 			}
-// 			std::cout << std::flush << "\r";
-// 		}
-// 		std::cout << std::endl;
-// 	}
-// }
+			// Print the current state of the loading bar
+			std::cout << i + 1 << "% >> ";
+			for (int j = 0; j < 100; j++)
+			{
+				switch (j)
+				{
+					case 0:
+						std::cout << "[";
+						break;
+					case 99:
+						std::cout << "]";
+						break;
+					default:
+						if (i >= j)
+							std::cout << "|";
+						else
+							std::cout << ".";
+						break;
+				}
+			}
+			std::cout << std::flush << "\r";
+		}
+		std::cout << std::endl;
+	}
+}
 
 int main()
 {
 	ColorPrint::green("<<< PROGRAM IS STARTING >>>\n");
 
-	// printLoadingBar();
+	printLoadingBar();
 
 	const Animal* meta = new Animal();
 	const Animal* animalDog = new Dog();
